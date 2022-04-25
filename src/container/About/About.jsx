@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import {motion} from "framer-motion";
 import './About.scss';
-import {images} from '../../constants';
-import {urlFor, client} from '../../clinet';
+import {urlFor, client} from '../../client';
+import {AppWrap} from "../../wrapper";
 
 
 const About = () => {
@@ -32,7 +32,7 @@ const About = () => {
                         className='app__profile-item'
                         key={about.title + index}
                     >
-                        <img src={about.imgUrl} alt={about.title}/>
+                        <img src={urlFor(about.imgUrl)} alt={about.title}/>
                         <h2 className='bold-text' style={{marginTop: 20}}>{about.title}</h2>
                         <h2 className='p-text' style={{marginTop: 10}}>{about.description}</h2>
                     </motion.div>
@@ -42,4 +42,4 @@ const About = () => {
     );
 };
 
-export default About;
+export default AppWrap(About, 'about');
