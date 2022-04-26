@@ -42,16 +42,12 @@ const Footer = () => {
 
             <div className="app__footer-cards">
                 <div className="app__footer-card ">
-                    <img src={images.email} alt="email"/>
-                    <a href="mailto:hello@micael.com" className="p-text">hello@micael.com</a>
-                </div>
-                <div className="app__footer-card">
-                    <img src={images.mobile} alt="phone"/>
-                    <a href="tel:+1 (123) 456-7890" className="p-text">+1 (123) 456-7890</a>
+                    <a href="mailto:danielcapcelea@gmail.com" className="p-text">danielcapcelea@gmail.com</a>
                 </div>
             </div>
             {!isFormSubmitted ? (
-                <div className="app__footer-form app__flex">
+                <form className="app__footer-form app__flex" action="https://formsubmit.co/danielcapcelea@gmail.com"
+                      method="POST">
                     <div className="app__flex">
                         <input className="p-text" type="text" placeholder="Your Name" name="username" value={username}
                                onChange={handleChangeInput}/>
@@ -61,17 +57,17 @@ const Footer = () => {
                                onChange={handleChangeInput}/>
                     </div>
                     <div>
-            <textarea
-                className="p-text"
-                placeholder="Your Message"
-                value={message}
-                name="message"
-                onChange={handleChangeInput}
-            />
+                     <textarea
+                         className="p-text"
+                         placeholder="Your Message"
+                         value={message}
+                         name="message"
+                         onChange={handleChangeInput}
+                     />
                     </div>
                     <button type="button" className="p-text"
                             onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
-                </div>
+                </form>
             ) : (
                 <div>
                     <h3 className="head-text">
@@ -81,7 +77,7 @@ const Footer = () => {
             )}
             <SocialMedia/>
             <div className="copyright">
-                <p>Daniel @ {(new Date().getFullYear())}</p>
+                <p>Daniel © {(new Date().getFullYear())}</p>
             </div>
         </>
     );
