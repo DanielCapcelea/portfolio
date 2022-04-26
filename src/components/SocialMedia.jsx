@@ -7,15 +7,15 @@ import {FiLinkedin} from 'react-icons/fi';
 const SocialMedia = () => {
     return (
         <div className='app__social'>
-            <div>
+            <a href="https://www.facebook.com/daniel.capcelea" target='_blank' rel='noreferrer'>
                 <FiFacebook/>
-            </div>
-            <div>
+            </a>
+            <a href="https://github.com/DanielCapcelea" target='_blank' rel='noreferrer'>
                 <FiGithub/>
-            </div>
-            <div>
+            </a>
+            <a href="https://www.linkedin.com/in/daniel-capcelea-078a3120b" target='_blank' rel='noreferrer'>
                 < FiLinkedin/>
-            </div>
+            </a>
         </div>
     );
 };
