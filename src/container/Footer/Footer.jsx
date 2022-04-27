@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
+import {BsFillArrowUpSquareFill} from 'react-icons/bs';
+import {motion} from 'framer-motion';
 
-import {images} from '../../constants';
 import {AppWrap, MotionWrap} from '../../wrapper';
 import {client} from '../../client';
 import './Footer.scss';
@@ -76,9 +77,20 @@ const Footer = () => {
                 </div>
             )}
             <SocialMedia/>
+
+            <motion.div
+                whileInView={{opacity: [-0.1, 1]}}
+                transition={{duration: 2}}
+                className='scroll-to-top'
+            >
+                <a href={`#home`}>
+                    <BsFillArrowUpSquareFill/>
+                </a>
+            </motion.div>
             <div className="copyright">
                 <p>Daniel © {(new Date().getFullYear())}</p>
             </div>
+
         </>
     );
 };

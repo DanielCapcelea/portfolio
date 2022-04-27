@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {HiMenuAlt4, HiX} from 'react-icons/hi';
 import {motion} from 'framer-motion';
-
 import {images} from '../../constants';
+
 import './Navbar.scss';
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
                 <a
                     href={`#home`}
                 >
-                    <img src={images.logo} alt="logo"/>
+                    <img src={images.logo1} alt="logo"/>
                 </a>
             </div>
             <ul className="app__navbar-links">
