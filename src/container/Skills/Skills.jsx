@@ -5,7 +5,7 @@ import ReactTooltip from 'react-tooltip';
 import {AppWrap, MotionWrap} from '../../wrapper';
 import {urlFor, client} from '../../client';
 import './Skills.scss';
-import {BsGlobe, BsInfoCircle} from "react-icons/bs";
+import {BsInfoCircle} from "react-icons/bs";
 
 const Skills = () => {
     const [experiences, setExperiences] = useState([]);
@@ -30,6 +30,7 @@ const Skills = () => {
 
             <div className="app__skills-container">
                 <div className="app__skills-exp">
+
                     {experiences.map((experience) => (
                         <motion.div
                             className="app__skills-exp-item"
@@ -41,6 +42,7 @@ const Skills = () => {
                             </div>
 
                             <motion.div className="app__skills-exp-works">
+
                                 {experience.works.map((work, index) => (
                                     <>
                                         <motion.div
@@ -74,19 +76,12 @@ const Skills = () => {
                                         >
                                             {work.desc}
                                         </ReactTooltip>
-
-
                                     </>
-
                                 ))}
-
                             </motion.div>
-
                         </motion.div>
                     ))}
-
                 </div>
-
                 <motion.div className="app__skills-list">
                     {skills.map((skill) => (
                         <motion.div
@@ -102,7 +97,6 @@ const Skills = () => {
                         </motion.div>
                     ))}
                 </motion.div>
-
             </div>
         </>
     );
