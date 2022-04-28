@@ -5,6 +5,7 @@ import ReactTooltip from 'react-tooltip';
 import {AppWrap, MotionWrap} from '../../wrapper';
 import {urlFor, client} from '../../client';
 import './Skills.scss';
+import {BsGlobe, BsInfoCircle} from "react-icons/bs";
 
 const Skills = () => {
     const [experiences, setExperiences] = useState([]);
@@ -34,9 +35,11 @@ const Skills = () => {
                             className="app__skills-exp-item"
                             key={experience.year}
                         >
+
                             <div className="app__skills-exp-year">
                                 <p className="bold-text">{experience.year}</p>
                             </div>
+
                             <motion.div className="app__skills-exp-works">
                                 {experience.works.map((work, index) => (
                                     <>
@@ -49,7 +52,18 @@ const Skills = () => {
                                             key={work.name}
                                         >
                                             <h4 className="bold-text">{work.name}</h4>
-                                            <p className="p-text">{work.company}</p>
+
+                                            <div style={{display: 'flex'}}>
+                                                <p className="p-text">
+                                                    {work.company}
+                                                </p>
+                                                <span style={{padding: '5px'}}>
+                                                 <BsInfoCircle/>
+                                                </span>
+                                            </div>
+                                            <p className="p-text">
+                                                {work.link}
+                                            </p>
                                         </motion.div>
                                         <ReactTooltip
                                             key={index}
@@ -60,11 +74,17 @@ const Skills = () => {
                                         >
                                             {work.desc}
                                         </ReactTooltip>
+
+
                                     </>
+
                                 ))}
+
                             </motion.div>
+
                         </motion.div>
                     ))}
+
                 </div>
 
                 <motion.div className="app__skills-list">
