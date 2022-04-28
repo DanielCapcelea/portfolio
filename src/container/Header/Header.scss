@@ -74,10 +74,10 @@
     flex-direction: column;
     margin-top: 2rem;
 
-    p {
+    span {
+      font-size: 17px;
       width: 100%;
-      text-transform: uppercase;
-      text-align: right;
+      color: var(--gray-color)
     }
   }
 

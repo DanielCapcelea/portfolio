@@ -3,6 +3,7 @@ import './Header.scss';
 import {motion} from "framer-motion";
 import {images} from '../../constants';
 import {AppWrap} from "../../wrapper";
+import {Typewriter} from "react-simple-typewriter";
 
 const scaleVariants = {
     whileInView: {
@@ -37,9 +38,17 @@ const Header = () => {
                     </div>
 
                     <div className='tag-cmp app-flex'>
-                        <p className='p-text'>
-                            Front-End Web Developer
-                        </p>
+                        <span>
+                            <Typewriter
+                                loop
+                                cursor
+                                cursorStyle="_"
+                                typeSpeed={150}
+                                deleteSpeed={100}
+                                delaySpeed={3000}
+                                words={['Front-End', 'Web Developer']}
+                            />
+                        </span>
                     </div>
                 </div>
             </motion.div>
