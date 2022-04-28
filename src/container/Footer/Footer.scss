@@ -136,10 +136,9 @@
     color: #3f6eb0;
     background: white;
     font-size: 25px;
-    position: fixed;
-    bottom: 7rem;
-    left: 7rem;
-    z-index: 100;
+    position: relative;
+    bottom: 3rem;
+    right: 45rem;
 
     &:hover {
       transform: scale(1.1)
