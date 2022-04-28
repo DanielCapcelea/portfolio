@@ -131,17 +131,22 @@
 }
 
 .scroll-to-top {
+  display: none;
 
   svg {
     color: #3f6eb0;
     background: white;
     font-size: 25px;
     position: relative;
-    bottom: 3rem;
-    right: 45rem;
+    bottom: 2.5rem;
+    right: 8rem;
 
     &:hover {
       transform: scale(1.1)
     }
+  }
+
+  @media screen and (max-width: 500px) {
+    display: flex;
   }
 }
