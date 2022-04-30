@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
-import {HiMenuAlt4, HiX} from 'react-icons/hi';
+import {HiX} from 'react-icons/hi';
 import {motion} from 'framer-motion';
 import {images} from '../../constants';
+import {GiHamburgerMenu} from "react-icons/gi";
 
 import './Navbar.scss';
+
+const menuItems = ['home', 'about', 'work', 'skills', 'contact'];
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
@@ -18,27 +21,26 @@ const Navbar = () => {
                 </a>
             </div>
             <ul className="app__navbar-links">
-                {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+                {menuItems.map((item) => (
                     <li className="app__flex p-text" key={`link-${item}`}>
-                        <div/>
-                        <a href={`#${item}`}>{item}</a>
+                        <a className='links' href={`#${item}`}>{item}</a>
                     </li>
                 ))}
             </ul>
 
             <div className="app__navbar-menu">
-                <HiMenuAlt4 onClick={() => setToggle(true)}/>
+                <GiHamburgerMenu onClick={() => setToggle(true)}/>
 
                 {toggle && (
                     <motion.div
-                        whileInView={{x: [300, 0]}}
-                        transition={{duration: 0.85, ease: 'easeOut'}}
+                        whileInView={{y: [-1000, 0]}}
+                        transition={{duration: 0.85, ease: 'easeInOut'}}
                     >
-                        <HiX onClick={() => setToggle(false)}/>
+                        <HiX className='closeIcon' onClick={() => setToggle(false)}/>
                         <ul>
-                            {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+                            {menuItems.map((item) => (
                                 <li key={item}>
-                                    <a href={`#${item}`} onClick={() => setToggle(false)}>
+                                    <a className='links' href={`#${item}`} onClick={() => setToggle(false)}>
                                         {item}
                                     </a>
                                 </li>
