@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {HiX} from 'react-icons/hi';
+import {HiCode, HiX} from 'react-icons/hi';
 import {motion} from 'framer-motion';
 import {images} from '../../constants';
 import {GiHamburgerMenu} from "react-icons/gi";
@@ -17,7 +17,7 @@ const Navbar = () => {
                 <a
                     href={`#home`}
                 >
-                    <img src={images.logo1} alt="logo"/>
+                    <HiCode/>
                 </a>
             </div>
             <ul className="app__navbar-links">
