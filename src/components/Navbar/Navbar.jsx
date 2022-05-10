@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {HiCode, HiX} from 'react-icons/hi';
+import {HiX} from 'react-icons/hi';
 import {motion} from 'framer-motion';
-import {images} from '../../constants';
 import {GiHamburgerMenu} from "react-icons/gi";
+import {images} from "../../constants";
 
 import './Navbar.scss';
 
@@ -17,7 +17,7 @@ const Navbar = () => {
                 <a
                     href={`#home`}
                 >
-                    <HiCode/>
+                    <img src={images.logo}/>
                 </a>
             </div>
             <ul className="app__navbar-links">
@@ -33,7 +33,7 @@ const Navbar = () => {
 
                 {toggle && (
                     <motion.div
-                        whileInView={{y: [-1000, 0]}}
+                        whileInView={{y: [-300, 0]}}
                         transition={{duration: 0.85, ease: 'easeInOut'}}
                     >
                         <HiX className='closeIcon' onClick={() => setToggle(false)}/>

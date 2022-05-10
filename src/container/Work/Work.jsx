@@ -6,6 +6,8 @@ import {AppWrap, MotionWrap} from '../../wrapper';
 import {urlFor, client} from '../../client';
 import './Work.scss';
 
+const workFilter = ['All', 'Mobile App', 'React JS', 'Next JS', 'E-Commerce'];
+
 const Work = () => {
     const [activeFilter, setActiveFilter] = useState('All');
     const [animateCard, setAnimateCard] = useState({y: 0, opacity: 1});
@@ -43,7 +45,7 @@ const Work = () => {
             </h2>
 
             <div className='app__work-filter'>
-                {['All', 'UI/UX', 'Web App', 'Mobile App', 'React JS'].map((item, index) => (
+                {workFilter.map((item, index) => (
                     <div
                         key={index}
                         onClick={() => handleWorkFilter(item)}

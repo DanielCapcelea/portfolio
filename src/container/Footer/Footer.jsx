@@ -47,7 +47,8 @@ const Footer = () => {
                 </div>
             </div>
             {!isFormSubmitted ? (
-                <form className="app__footer-form app__flex" action="https://formsubmit.co/danielcapcelea@gmail.com" method="POST">
+                <form className="app__footer-form app__flex" action="https://formsubmit.co/danielcapcelea@gmail.com"
+                      method="POST">
                     <div className="app__flex">
                         <input className="p-text" type="text" placeholder="Your Name" name="username" value={username}
                                onChange={handleChangeInput}/>
@@ -77,15 +78,15 @@ const Footer = () => {
             )}
             <SocialMedia/>
 
-                <motion.div
-                    whileInView={{opacity: [-0.1, 1]}}
-                    transition={{duration: 2}}
-                    className='scroll-to-top'
-                >
-                    <a href={`#home`}>
-                        <BsFillArrowUpSquareFill/>
-                    </a>
-                </motion.div>
+            <motion.div
+                whileInView={{opacity: [-0.1, 1]}}
+                transition={{duration: 2}}
+                className='scroll-to-top'
+            >
+                <a href={`#home`}>
+                    <BsFillArrowUpSquareFill/>
+                </a>
+            </motion.div>
             <div className="copyright">
                 <p>Daniel © {(new Date().getFullYear())}</p>
             </div>
