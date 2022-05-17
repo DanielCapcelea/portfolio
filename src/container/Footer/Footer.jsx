@@ -76,7 +76,6 @@ const Footer = () => {
                     </h3>
                 </div>
             )}
-            <SocialMedia/>
 
             <motion.div
                 whileInView={{opacity: [-0.1, 1]}}
@@ -87,8 +86,12 @@ const Footer = () => {
                     <BsFillArrowUpSquareFill/>
                 </a>
             </motion.div>
-            <div className="copyright">
-                <p>Daniel © {(new Date().getFullYear())}</p>
+
+            <div className='positioning-footer'>
+                <SocialMedia/>
+                <div className="copyright">
+                    <p>Daniel © {(new Date().getFullYear())}</p>
+                </div>
             </div>
 
         </>
