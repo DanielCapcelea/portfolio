@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {BsFillArrowUpSquareFill} from 'react-icons/bs';
 import {motion} from 'framer-motion';
+import emailjs from '@emailjs/browser';
 
 import {AppWrap, MotionWrap} from '../../wrapper';
 import {client} from '../../client';
@@ -11,8 +12,20 @@ const Footer = () => {
     const [formData, setFormData] = useState({name: '', email: '', message: ''});
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
+    const form = useRef();
 
-    const {username, email, message} = formData;
+    const {name, email, message} = formData;
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_czjj2dc', 'template_vzlulfo', form.current, '2o47fO93cW4zADTKF')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    };
 
     const handleChangeInput = (e) => {
         const {name, value} = e.target;
@@ -24,7 +37,7 @@ const Footer = () => {
 
         const contact = {
             _type: 'contact',
-            name: formData.username,
+            name: formData.name,
             email: formData.email,
             message: formData.message,
         };
@@ -47,10 +60,9 @@ const Footer = () => {
                 </div>
             </div>
             {!isFormSubmitted ? (
-                <form className="app__footer-form app__flex" action="https://formsubmit.co/danielcapcelea@gmail.com"
-                      method="POST">
+                <form className="app__footer-form app__flex" ref={form} onSubmit={sendEmail}>
                     <div className="app__flex">
-                        <input className="p-text" type="text" placeholder="Your Name" name="username" value={username}
+                        <input className="p-text" type="text" placeholder="Your Name" name="name" value={name}
                                onChange={handleChangeInput}/>
                     </div>
                     <div className="app__flex">
