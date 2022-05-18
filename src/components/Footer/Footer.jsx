@@ -5,7 +5,7 @@ import {motion} from 'framer-motion';
 import {AppWrap, MotionWrap} from '../../wrapper';
 import {client} from '../../client';
 import './Footer.scss';
-import {SocialMedia} from "../../components";
+import {SocialMedia} from "../index";
 
 const Footer = () => {
     const [formData, setFormData] = useState({name: '', email: '', message: ''});
