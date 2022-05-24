@@ -75,9 +75,17 @@ const Header = () => {
                 className='app__header-circles'
             >
                 {[images.javascript, images.react, images.html, images.css].map((circle, index) =>
-                    <div className='circle-cmp app__flex' key={`circle-${index}`}>
-                        <img src={circle} alt='circle'/>
-                    </div>
+                    <motion.div
+                        className='app__flex'
+                        key={`circle-${index}`}
+                        whileTap={{scale: 0.8}}
+                        drag={true}
+                        dragConstraints={{left: -50, right: 50, top: -100, bottom: 100}}
+                        initial={{opacity: 0, x: -100}}
+                        animate={{opacity: 1, x: 0, transition: {duration: 1}}}
+                    >
+                        <img style={{pointerEvents: "none"}} src={circle} alt='circle'/>
+                    </motion.div>
                 )}
             </motion.div>
 

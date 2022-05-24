@@ -6,7 +6,7 @@ import {AppWrap, MotionWrap} from '../../wrapper';
 import {urlFor, client} from '../../client';
 import './Work.scss';
 
-const workFilter = ['All', 'Mobile App', 'React JS', 'Next JS', 'E-Commerce'];
+const workFilter = ['All', 'React JS', 'Next JS', 'E-Commerce'];
 
 const Work = () => {
     const [activeFilter, setActiveFilter] = useState('All');

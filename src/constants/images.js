@@ -1,10 +1,6 @@
-import email from '../assets/email.png';
-import mobile from '../assets/mobile.png';
 import api from '../assets/api.png';
-import cpp from '../assets/cpp.png';
 import css from '../assets/css.png';
 import figma from '../assets/figma.png';
-import flutter from '../assets/flutter.png';
 import git from '../assets/git.png';
 import graphql from '../assets/graphql.png';
 import html from '../assets/html.png';
@@ -29,15 +25,11 @@ import logo2 from '../assets/logo2.png';
 
 export default {
     logo,
-    email,
     logo1,
     logo2,
-    mobile,
     api,
-    cpp,
     css,
     figma,
-    flutter,
     git,
     graphql,
     html,
