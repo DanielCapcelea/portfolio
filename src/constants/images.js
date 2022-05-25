@@ -11,14 +11,13 @@ import react from '../assets/react.png';
 import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
-
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
 import about03 from '../assets/about03.png';
 import about04 from '../assets/about04.png';
 import logo from '../assets/logo.png';
 
-import profile from '../assets/profile.png';
+import profile from '../assets/profile.svg';
 import circle from '../assets/circle.svg';
 import logo1 from '../assets/logo1.png';
 import logo2 from '../assets/logo2.png';
