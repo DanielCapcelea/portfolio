@@ -18,3 +18,26 @@
     margin: 0;
     scroll-behavior: smooth;
 }
+
+::-webkit-scrollbar {
+    width: 0.9em;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 100vw;
+    margin-block: .1em;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-color);
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
